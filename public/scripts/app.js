@@ -1,6 +1,6 @@
 'use strict';
 
-console.log("app.js is running");
+console.log("App.js is running");
 
 var app = {
     title: 'Some Title',
@@ -36,22 +36,19 @@ var template = React.createElement(
     )
 );
 
-var user = {
-    name: 'Alex',
-    age: 37,
-    location: 'Los Angeles'
+var count = 0;
+
+var addOne = function addOne() {
+    console.log('addOne');
 };
 
-function getLocation(location) {
-    if (location) {
-        return React.createElement(
-            'p',
-            null,
-            'Location: ',
-            location
-        );
-    }
-}
+var minusOne = function minusOne() {
+    console.log('minusOne');
+};
+
+var reset = function reset() {
+    console.log('reset');
+};
 
 var templateTwo = React.createElement(
     'div',
@@ -59,15 +56,24 @@ var templateTwo = React.createElement(
     React.createElement(
         'h1',
         null,
-        user.name ? user.name : 'Anonymous'
+        'Count: ',
+        count
     ),
-    user.age && user.age >= 18 && React.createElement(
-        'p',
-        null,
-        'Age: ',
-        user.age
+    React.createElement(
+        'button',
+        { onClick: addOne },
+        '+1'
     ),
-    getLocation(user.location)
+    React.createElement(
+        'button',
+        { onClick: minusOne },
+        '-1'
+    ),
+    React.createElement(
+        'button',
+        { onClick: reset },
+        'reset'
+    )
 );
 
 var appRoot = document.getElementById('app');
