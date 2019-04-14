@@ -12,7 +12,7 @@
   "scripts": {
     "build": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react",
     "watch": "babel src/app.js --out-file=public/scripts/app.js --presets=env,react --watch",
-    "watch-playground": "babel src/playground/build-it-visible.js --out-file=public/scripts/app.js --presets=env,react --watch",
+    "watch-playground": "babel src/playground/es6-classes-1.js --out-file=public/scripts/app.js --presets=env,react --watch",
     "serve": "live-server public"
   }
 }
