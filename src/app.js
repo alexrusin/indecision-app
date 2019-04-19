@@ -1,6 +1,6 @@
-import {square, add} from './utils.js';
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-console.log('app.j is running');
+const template = <p>This is JSX</p>
 
-console.log(square(5));
-console.log(add(2, 3));
+ReactDOM.render(template, document.getElementById('app'));
